@@ -25,7 +25,8 @@ class PostController extends Controller
     }
     public function create()
     {
-        return view('post.create');
+        dd("dato");
+        // return view('post.create');
     }
     public function store(Request $request)
     {
