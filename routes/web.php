@@ -36,8 +36,8 @@ Route::put('/editar-perfil/{user:username}',[PerfilController::class,'update'])-
 // cerrar cesion 
 Route::post('/cerrar-sesion', [LogoutController::class, 'store'])->name('logout');
         // post con url dinamico {modelo:el atributo}
+Route::get('/publicacion/create', [PostController::class, 'create'])->name('post.crear');
 Route::get('/{user:username}', [PostController::class, 'index'])->name('post.index');
-Route::get('/publicacion/create', [PostController::class, 'create'])->name('post.create');
 Route::post('/publicacion',[PostController::class,'store'])->name('post.store');
 // Route::get('/publicacion/{nombre_del_modelo}',[PostController::class,'show'])->name('post.show');
 Route::get('/{user:username}/publicacion/{post}',[PostController::class,'show'])->name('post.show');
